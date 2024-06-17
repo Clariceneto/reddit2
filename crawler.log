@@ -1,3 +1,31 @@
-2024-06-13 20:44:09 [info]: Searching articles for query: machine learning
-2024-06-13 20:44:23 [info]: Data saved to output.json
-2024-06-13 20:44:23 [info]: Detailed report generated in report.json
+2024-06-17 15:02:20 [info]: Authentication successful, access token received.
+2024-06-17 15:02:20 [info]: Searching posts for query: AI
+2024-06-17 15:02:22 [info]: Data saved to output.json
+2024-06-17 15:02:22 [error]: Error posting to webhook: 
+2024-06-17 15:02:22 [error]: Error posting to webhook: 
+2024-06-17 15:04:49 [info]: Authentication successful, access token received.
+2024-06-17 15:04:49 [info]: Searching posts for query: AI
+2024-06-17 15:04:51 [error]: Error in main function: Cannot read properties of undefined (reading 'children')
+2024-06-17 15:05:38 [info]: Authentication successful, access token received.
+2024-06-17 15:05:38 [info]: Searching posts for query: AI
+2024-06-17 15:05:40 [error]: Error in main function: Cannot read properties of undefined (reading 'children')
+2024-06-17 15:08:18 [info]: Authentication successful, access token received.
+2024-06-17 15:08:18 [info]: Searching posts for query: AI
+2024-06-17 15:08:20 [info]: Data saved to output.json
+2024-06-17 15:08:20 [error]: Error posting to webhook: 
+2024-06-17 15:08:20 [error]: Error posting to webhook: 
+2024-06-17 15:09:16 [info]: Authentication successful, access token received.
+2024-06-17 15:09:16 [info]: Searching posts for query: AI
+2024-06-17 15:09:25 [info]: Data saved to output.json
+2024-06-17 15:09:26 [error]: Error posting to webhook: 
+2024-06-17 15:09:26 [error]: Error posting to webhook: 
+2024-06-17 15:11:27 [info]: Authentication successful, access token received.
+2024-06-17 15:11:27 [info]: Searching posts for query: AI
+2024-06-17 15:11:29 [info]: Data saved to output.json
+2024-06-17 15:11:30 [error]: Error posting to webhook: 
+2024-06-17 15:11:30 [error]: Error posting to webhook: 
+2024-06-17 15:14:44 [info]: Authentication successful, access token received.
+2024-06-17 15:14:44 [info]: Searching posts for query: AI
+2024-06-17 15:15:02 [info]: Data saved to output.json
+2024-06-17 15:15:02 [error]: Error posting to webhook: 
+2024-06-17 15:15:02 [error]: Error posting to webhook: 

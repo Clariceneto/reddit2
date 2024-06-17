@@ -1,33 +1,24 @@
-const cheerio = require('cheerio');
+const logger = require('./logger');
 
-async function extractData(html) {
-  const $ = cheerio.load(html);
-  const articles = [];
+function extractData(responseData, minUpvotes) {
+  try {
+    const posts = responseData.data.children
+      .filter(post => post.data.ups >= minUpvotes)
+      .map(post => ({
+        title: post.data.title,
+        author: post.data.author,
+        url: post.data.url,
+        created_utc: post.data.created_utc,
+        ups: post.data.ups,
+        permalink: post.data.permalink
+      }));
 
-  $('.gs_r.gs_or.gs_scl').each((index, element) => {
-    const title = $(element).find('.gs_rt a').text();
-    const authors = $(element).find('.gs_a').text();
-    const abstract = $(element).find('.gs_rs').text();
-    const link = $(element).find('.gs_rt a').attr('href');
-    const citationCount = $(element).find('.gs_fl a').first().text().match(/\d+/);
-    const publication = $(element).find('.gs_a').text().split(' - ')[1] || "";
-    const publisher = $(element).find('.gs_a').text().split(' - ')[0] || "";
-    const date = new Date().toLocaleString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-
-    articles.push({
-      title,
-      authors,
-      abstract,
-      link,
-      citationCount: citationCount ? parseInt(citationCount[0]) : 0,
-      publication,
-      publisher,
-      date,
-      project: "AI"
-    });
-  });
-
-  return articles;
+    return posts;
+  } catch (error) {
+    logger.error(`Error extracting data: ${error.message}`);
+    logger.debug(`Response data: ${JSON.stringify(responseData, null, 2)}`);
+    throw error;
+  }
 }
 
 module.exports = extractData;
